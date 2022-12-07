@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class RoundSvcApplication {
+public class RankSvcApplication {
 
 	@GetMapping("/message")
 	public String getMessage() {
@@ -15,7 +15,7 @@ public class RoundSvcApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(RoundSvcApplication.class, args);
+		SpringApplication.run(RankSvcApplication.class, args);
 	}
 
 }

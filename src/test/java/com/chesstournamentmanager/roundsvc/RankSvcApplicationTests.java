@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RoundSvcApplicationTests {
+class RankSvcApplicationTests {
 
 	@Autowired
-	private RoundSvcApplication roundSvcApplication;
+	private RankSvcApplication rankSvcApplication;
 
 	@Test
 	void contextLoads() {
@@ -17,6 +17,6 @@ class RoundSvcApplicationTests {
 
 	@Test
 	void sendsWelcomeMessage() {
-		assertThat(roundSvcApplication.getMessage()).isEqualTo("Welcome to the round service.");
+		assertThat(rankSvcApplication.getMessage()).isEqualTo("Welcome to the round service.");
 	}
 }
