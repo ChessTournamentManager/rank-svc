@@ -1,4 +1,4 @@
-package com.chesstournamentmanager.roundsvc;
+package com.chesstournamentmanager.ranksvc;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -8,15 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class RankSvcApplicationTests {
 
-	@Autowired
-	private RankSvcApplication rankSvcApplication;
-
 	@Test
 	void contextLoads() {
-	}
-
-	@Test
-	void sendsWelcomeMessage() {
-		assertThat(rankSvcApplication.getMessage()).isEqualTo("Welcome to the round service.");
 	}
 }
