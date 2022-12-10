@@ -1,0 +1,10 @@
+version: "3.9"
+name: ChessTournamentManager
+services:
+  rank-db-cassandra:
+    container_name: rank-db-cassandra
+    image: cassandra:latest
+    ports:
+      - "9042:9042"
+    expose:
+      - 9042
