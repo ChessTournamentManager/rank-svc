@@ -10,18 +10,19 @@ import java.util.UUID;
 @Table(value = "rank")
 public class Rank {
     private static final short DEFAULT_RANK_NUMBER = 1;
+
     @PrimaryKey
-    private final UUID id;
+    private UUID id;
     @Column("tournament_id")
-    private final UUID tournamentId;
+    private UUID tournamentId;
     @Column("player_id")
-    private final UUID playerId;
+    private UUID playerId;
     @Column("rank_number")
     private short rankNumber;
     @Column("points")
     private float points;
     @Column("created_at")
-    private final LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
     public Rank (UUID tournamentId, UUID playerId) {
         this.id = UUID.randomUUID();

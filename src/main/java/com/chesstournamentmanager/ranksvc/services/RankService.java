@@ -78,14 +78,6 @@ public class RankService {
             return "No player id was provided";
         }
 
-        if (rank.getRankNumber() <= 0) {
-            return "No rank number was provided";
-        }
-
-        if (rank.getPoints() <= 0f) {
-            return "No rank number was provided";
-        }
-
         return "";
     }
 }
