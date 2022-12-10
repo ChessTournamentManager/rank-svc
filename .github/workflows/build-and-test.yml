@@ -11,8 +11,9 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
+    container: ubuntu
     services:
-      127.0.0.1:
+      rank-db-cassandra:
         image: cassandra:latest
         ports:
           - 9042:9042
