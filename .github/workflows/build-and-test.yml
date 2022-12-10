@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     services:
       cassandra:
-        container_name: rank-db-cassandra
         image: cassandra:latest
         ports:
           - 9042:9042
+        options: --name rank-db-cassandra --hostname rank-db-cassandra
     steps:
 
     - uses: actions/checkout@v3
