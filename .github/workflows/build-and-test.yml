@@ -12,7 +12,7 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     services:
-      cassandra:
+      rank-db-cassandra:
         image: cassandra:latest
         ports:
           - 9042:9042
