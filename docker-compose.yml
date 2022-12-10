@@ -7,7 +7,7 @@ services:
     image: rank-svc
     build:
       context: .
-      dockerfile: /Dockerfile
+      dockerfile: Dockerfile
     ports:
       - "8082:8082"
   rank-db-cassandra:
