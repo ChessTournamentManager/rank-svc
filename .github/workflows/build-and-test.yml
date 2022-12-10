@@ -19,7 +19,7 @@ jobs:
         fetch-depth: 0
 
     - name: Run cassandra container
-      run: docker container run -d --name rank-db-cassandra cassandra:latest -p 9042:9042
+      run: docker container run -d -h 127.0.0.1 --name rank-db-cassandra cassandra:latest -p 9042:9042
 
     - name: Set up JDK 18
       uses: actions/setup-java@v3
