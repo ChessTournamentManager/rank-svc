@@ -14,11 +14,10 @@ jobs:
         ports:
           - "9042:9042"
         options: --health-cmd "cqlsh --debug" --health-interval 5s --health-retries 10
-        steps:
-          - run: docker ps
-          - run: docker exec ${{ job.services.rank-db-cassandra.id }} cqlsh --debug
 
     steps:
+    - run: docker ps
+    - run: docker exec ${{ job.services.rank-db-cassandra.id }} cqlsh --debug
 
     - uses: actions/checkout@v3
       with:
