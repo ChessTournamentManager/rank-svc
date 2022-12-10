@@ -1,7 +1,7 @@
 package com.chesstournamentmanager.ranksvc.models;
 
 import org.springframework.data.cassandra.core.mapping.Column;
-import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.time.LocalDateTime;
@@ -9,8 +9,8 @@ import java.util.UUID;
 
 @Table(value = "rank")
 public class Rank {
-    private static final short DEFAULT_RANK_NUMBER = 0;
-    @PrimaryKeyColumn
+    private static final short DEFAULT_RANK_NUMBER = 1;
+    @PrimaryKey
     private final UUID id;
     @Column("tournament_id")
     private final UUID tournamentId;

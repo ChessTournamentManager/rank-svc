@@ -88,6 +88,6 @@
                 </executions>
             </plugin>
 		</plugins>
-		<finalName>round-svc</finalName>
+		<finalName>rank-svc</finalName>
 	</build>
 </project>
