@@ -9,15 +9,15 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     services:
-      rank-db-cassandra:
-        image: cassandra:latest
+      rank-db-scylla:
+        image: scylladb/scylla:latest
         ports:
           - "9042:9042"
         options: --health-cmd "cqlsh --debug" --health-interval 5s --health-retries 10
 
     steps:
     - run: docker ps
-    - run: docker exec ${{ job.services.rank-db-cassandra.id }} cqlsh --debug localhost 9042 --execute="CREATE KEYSPACE rankKeyspace WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};"
+    - run: docker exec ${{ job.services.rank-db-scylla.id }} cqlsh --debug localhost 9042 --execute="CREATE KEYSPACE rankKeyspace WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};"
 
     - uses: actions/checkout@v3
       with:
