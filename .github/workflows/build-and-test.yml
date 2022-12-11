@@ -13,7 +13,7 @@ jobs:
         image: scylladb/scylla:latest
         ports:
           - "9042:9042"
-        options: --health-cmd "cqlsh --debug" --health-interval 5s --health-retries 10
+        options: --health-cmd "cqlsh --debug" --health-interval 2s --health-retries 15
 
     steps:
     - run: docker ps

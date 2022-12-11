@@ -38,8 +38,9 @@ public class RankService {
 
     // Update methods
 
-    @Transactional
     public void updateRank(UUID id, short rankNumber, float points) {
+        boolean changedValue = false;
+
         Rank rank = rankRepository.findById(id)
                 .orElseThrow(() -> new IllegalStateException(
                         "Rank with id " + id + " does not exist"
@@ -48,11 +49,17 @@ public class RankService {
         if (rankNumber > 0 &&
                 !Objects.equals(rank.getRankNumber(), rankNumber)) {
             rank.setRankNumber(rankNumber);
+            changedValue = true;
         }
 
         if (points >= 0f &&
                 !Objects.equals(rank.getPoints(), points)) {
             rank.setPoints(points);
+            changedValue = true;
+        }
+
+        if (changedValue) {
+            rankRepository.save(rank);
         }
     }
 
