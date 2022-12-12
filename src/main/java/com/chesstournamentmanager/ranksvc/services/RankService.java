@@ -3,9 +3,7 @@ package com.chesstournamentmanager.ranksvc.services;
 import com.chesstournamentmanager.ranksvc.models.Rank;
 import com.chesstournamentmanager.ranksvc.repositories.RankRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Objects;
 import java.util.Optional;
