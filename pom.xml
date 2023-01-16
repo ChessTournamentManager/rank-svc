@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.chesstournamentmanager</groupId>
-	<artifactId>round-svc</artifactId>
+	<artifactId>rank-svc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>round-svc</name>
-	<description>Round service for the chess tournament manager site</description>
+	<name>rank-svc</name>
+	<description>Rank service for the chess tournament manager site</description>
 	<properties>
 		<java.version>18</java.version>
         <!-- JaCoCo Properties -->
@@ -26,6 +26,21 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.13</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-cassandra -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-cassandra</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.scylladb</groupId>
+			<artifactId>java-driver-core</artifactId>
+			<version>4.14.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -78,6 +93,6 @@
                 </executions>
             </plugin>
 		</plugins>
-		<finalName>round-svc</finalName>
+		<finalName>rank-svc</finalName>
 	</build>
 </project>
